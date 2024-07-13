@@ -1,4 +1,3 @@
-
 body 
 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -65,6 +64,11 @@ body
     background-color: #f0f8ff;
     grid-area: header;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+
 }
 
 .content {
@@ -72,12 +76,10 @@ body
     grid-area: content;
 }
 
-.header {
-    display: flex;
-}
-.header img {
+
+
+.searchbar img {
     width: 1.2rem;
-    margin: 1rem;
 }
 
 .header form {
@@ -94,12 +96,77 @@ body
 
 .searchbar {
     display: flex;
+    gap: 1rem;
 }
 
+.avatarside {
+    display: flex;
+    align-items: center;
+}
 
+.avatarsmall {
+    background:url(../landing/images/card1.jpeg) no-repeat center center / cover;
+    padding: 1.2rem;
+    margin: 1rem;
+    border-radius: 50%;
+    box-shadow: 1px 1px 3px;
+}
 
+.avatarside img {
+    width: 2rem;
+}
+.greeting {
+    display:flex;
+    gap: 8px;
 
+}
+.avatarlarge {
+    
+    background:url(../landing/images/card1.jpeg) no-repeat center center / cover;
+    padding: 1.8rem;
+    margin: 0.25rem;
+    border-radius: 50%;
+    box-shadow: 1px 1px 3px;
+}
 
+.firstline, .secondline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.greetingtext {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap:0.2rem
+}
+
+.greetingtext h3 {
+    align-self: center;
+    margin:0;
+}
+
+.greetingtext p {
+    align-self: flex-start;
+    font-weight: 600;
+    font-size: 14px;
+    margin:0;
+}
+
+.buttons {
+    align-self: center;
+    display:flex;
+    gap: 2rem;
+}
+ .buttons button {
+    color: #f0f8ff;
+    border: none;
+    border-radius: 5rem;
+    background-color:dodgerblue;
+    padding: 0.5rem;
+    width: 5rem
+ }
 
 
 
@@ -109,7 +176,21 @@ body
 
 
 @media only screen and (max-width: 768px) {
-    .sidebar p, h3 {
+    body 
+{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width:100vw;
+    height: 100vh;
+    margin:0;
+    padding:0;
+    display: grid;
+    grid-template-columns: 15vw 85vw;
+    grid-template-rows: 30vh 70vh;
+    grid-template-areas: "sidebar header" 
+                        "sidebar content";
+}
+
+    .sidebar p, .sidebar h3 {
         visibility: hidden;
     }
     
