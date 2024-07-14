@@ -273,6 +273,46 @@ body
     margin: 0.5rem 0 0.5rem 0;
 }
 
+.cardgrid {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: minmax(180px, auto);
+}
+
+.card {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:1rem;
+    background-color: aliceblue;
+    border-left:6px solid rgb(240, 161, 42);
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px #0000003b;
+    width: 100%;
+    height: 100%;
+}
+.cardicons img {
+    width: 1.2rem;
+}
+
+.cardicons {
+    align-self: flex-end;
+    display:flex;
+    gap: 0.4rem;
+    width:30%;
+}
+
+.card p {
+    margin:0;
+    font-size: 14px;
+}
+.card h3 {
+    margin:0;
+    font-size: 16px;
+}
+
+
 @media only screen and (max-width: 768px) {
     body 
 {
